@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     </head>
     <body>
         <div class="container">
@@ -39,7 +38,7 @@
                         Your Desired Course Name 
                     </label>
                     <br>
-                    <select name="course" required="required" class="form-control">
+                    <select name="course.id" required="required" class="form-control">
                         <option value="">Select Desired Course</option>
                         <c:forEach var="cou" items="${courses}">
                             <option value="${cou.id}">${cou.courseName}</option>
@@ -51,7 +50,7 @@
                         Education(Faculty) 
                     </label>
                     <br>
-                    <select name="faculty" required="required" class="form-control">
+                    <select name="faculty.facultyId" required="required" class="form-control">
                         <option value="">Select Your Faculty</option>
                         <c:forEach var="fac" items="${faculty}">
                             <option value="${fac.facultyId}">${fac.facultyName}</option>
@@ -63,7 +62,7 @@
                         What best describes your current employment status?
                     </label>
                     <br>
-                    <select name="employmentStatus" required="required" class="form-control">
+                    <select name="employmentStatus.employmentStatusid" required="required" class="form-control">
                         <option value="">Select Employment Status</option>
                         <c:forEach var="emp" items="${employmentStatus}">
                             <option value="${emp.employmentStatusid}">${emp.employmentStatusName}</option>
@@ -75,13 +74,13 @@
                         How did you hear about Leapfrog Academy? 
                     </label>
                     <br>
-                    <select name="enquiryStatus" required="required" class="form-control">
+                    <select name="enquiryStatus.enquiryStatusId" required="required" class="form-control">
                         <option value="">Please Select</option>
                         <c:forEach var="enq" items="${enquiry}">
                             <option value="${enq.enquiryStatusId}">${enq.enquiryStatusName}</option>
                         </c:forEach>
                     </select>
-                </div>
+                </div>     
                 <br>
                 <div>
                     <button type="submit" class="btn btn-success">Submit</button>

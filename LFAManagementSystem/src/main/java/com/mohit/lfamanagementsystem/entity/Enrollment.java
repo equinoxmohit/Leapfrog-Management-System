@@ -19,13 +19,12 @@ public class Enrollment {
     private Faculty faculty;
     private EmploymentStatus employmentStatus;
     private EnquiryStatus enquiryStatus;
-    private boolean enrollmentStatus;
-    private int isRead;
+
 
     public Enrollment() {
     }
 
-    public Enrollment(int enrollmentId, String firstName, String lastName, String email, String contactNumber, String collegeName, Date enrollmentDate, Course course, Faculty faculty, EmploymentStatus employmentStatus, EnquiryStatus enquiryStatus, boolean enrollmentStatus, int isRead) {
+    public Enrollment(int enrollmentId, String firstName, String lastName, String email, String contactNumber, String collegeName, Date enrollmentDate, Course course, Faculty faculty, EmploymentStatus employmentStatus, EnquiryStatus enquiryStatus) {
         this.enrollmentId = enrollmentId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -37,8 +36,7 @@ public class Enrollment {
         this.faculty = faculty;
         this.employmentStatus = employmentStatus;
         this.enquiryStatus = enquiryStatus;
-        this.enrollmentStatus = enrollmentStatus;
-        this.isRead = isRead;
+      
     }
 
     public int getEnrollmentId() {
@@ -129,21 +127,7 @@ public class Enrollment {
         this.enquiryStatus = enquiryStatus;
     }
 
-    public boolean isEnrollmentStatus() {
-        return enrollmentStatus;
-    }
-
-    public void setEnrollmentStatus(boolean enrollmentStatus) {
-        this.enrollmentStatus = enrollmentStatus;
-    }
-
-    public int getIsRead() {
-        return isRead;
-    }
-
-    public void setIsRead(int isRead) {
-        this.isRead = isRead;
-    }
+   
     
     
     
